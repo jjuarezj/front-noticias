@@ -1,0 +1,22 @@
+
+
+<mat-card class="mat-card">
+<mat-accordion >
+    <mat-expansion-panel *ngFor="let noticia of listNoticias; let i = index">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            <b>{{noticia.titulo}}</b>
+        </mat-panel-title>
+        <mat-panel-description>
+            <b> {{noticia.usuario.usuario | uppercase}} </b> &nbsp; A: {{noticia.f_publicacion }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>
+        {{noticia.resumen}}
+      </p><br>
+      <button  mat-raised-button color="primary" (click)="openDialog(noticia)">Comentar</button>
+    </mat-expansion-panel>
+    </mat-accordion>
+
+</mat-card>
+

@@ -1,0 +1,38 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button aria-label="menu" aria-hidden="true" (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">NOTICIAS DE MEXICO</h1>
+    <span class="menu-spacer"></span>
+ 
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56">
+      <mat-nav-list>
+        <a mat-list-item routerLink="/noticias">
+          <mat-icon>menu_book</mat-icon> Noticias
+        </a>
+        <a mat-list-item routerLink="/altaNoticias">
+          <mat-icon>note_add</mat-icon> Alta Noticias
+        </a>
+
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+      <div class="app">
+        <main>
+          <!--Contenedor-->
+          <router-outlet #contentView>
+          </router-outlet>
+        </main>
+      </div>
+
+
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

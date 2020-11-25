@@ -1,0 +1,32 @@
+<mat-card class="mat-card">
+    <div class="example-container mat-elevation-z8">
+        <form [formGroup]="noticiaForm">
+            <h2>Alta Noticia</h2>
+
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Titulo</mat-label>
+                <textarea formControlName="titulo" name="titulo" placeholder="Titulo de la noticia" matInput></textarea>
+                <mat-icon matSuffix>text_fields</mat-icon>
+                <mat-error>
+                    Titulo <strong>requirido</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Resumen</mat-label>
+                <textarea formControlName="resumen" name="resumen" placeholder="Resumen de la noticia"
+                    matInput></textarea>
+                <mat-icon matSuffix>format_align_justify</mat-icon>
+                <mat-error>
+                    Resumen <strong>requirido</strong>
+                </mat-error>
+            </mat-form-field>
+
+
+            <button mat-raised-button color="primary" (click)="registrarNoticia()">Crear</button>
+
+        </form>
+
+    </div>
+
+</mat-card>

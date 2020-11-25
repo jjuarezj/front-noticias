@@ -1,0 +1,6 @@
+{
+    "registraNoticia": "http://localhost:8080/notas/registra-nota",
+    "listaNoticias": "http://localhost:8080/notas/lista-notas",
+    "listaComentarios": "http://localhost:8080/comentarios/lista-comentarios",
+    "listaRespuestas": "http://localhost:8080/respuestas/lista-respuestas"
+}

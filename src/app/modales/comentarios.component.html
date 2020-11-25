@@ -1,0 +1,15 @@
+<h1><b>{{titulo}}</b></h1>
+
+<div mat-dialog-content>
+<h1>Comentarios Sobre la Nota:</h1><br>
+  <mat-list role="list" *ngFor="let comentario of listComentarios" >
+    <mat-list-item role="listitem"> <b> {{comentario.comentario}} </b> &nbsp;&nbsp;&nbsp;&nbsp;
+         Usuario: {{comentario.usuario.usuario}} Fecha: {{comentario.f_comentario}}</mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+
+</div>
+  
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancelar</button>
+  </div>
